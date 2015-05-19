@@ -15,7 +15,7 @@ class CartSpec extends ObjectBehavior {
         $this->addLineItem($p->setQuantity(3))->shouldReturn(1);
     }
 
-    function it_should_allow_discount() {
+    function it_should_allow_setting_discount() {
         $this->setDiscount(new \Discount(5.00))->getDiscount()->shouldReturn(5.00);
     }
 

@@ -19,7 +19,7 @@ class CartSpec extends ObjectBehavior {
         $this->setDiscount(new \Discount(5.00))->getDiscount()->shouldReturn(5.00);
     }
 
-    function it_should_calclulate_total() {
+    function it_should_calculate_total() {
         $p = new \ProductLineItem(9000, 44.95);
         $this->addLineItem($p->setQuantity(1));
         $this->setDiscount(new \Discount(5.00));

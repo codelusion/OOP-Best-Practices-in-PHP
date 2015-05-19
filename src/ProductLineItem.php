@@ -28,7 +28,7 @@ class ProductLineItem implements ISaleable {
     }
 
     public function setQuantity($quantity) {
-        if (is_numeric($quantity)) {
+        if (is_numeric($quantity) && $quantity > 0) {
             $this->quantity = $quantity;
         } else {
             throw new RuntimeException('Invalid quantity');

@@ -11,10 +11,10 @@ class Discount {
 
 
     public function getAmount($items) {
-        if (is_array($items)) {
+        if (is_array($items) && !empty($items)) {
             return $this->amount;
         } else {
-            throw new RuntimeException('invalid items');
+            return 0;
         }
     }
 

@@ -16,6 +16,8 @@ class CartSpec extends ObjectBehavior {
     }
 
     function it_should_allow_setting_discount() {
+        $p = new \ProductLineItem(9000, 44.95);
+        $this->addLineItem($p->setQuantity(1));
         $this->setDiscount(new \Discount(5.00))->getDiscount()->shouldReturn(5.00);
     }
 

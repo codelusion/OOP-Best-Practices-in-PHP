@@ -72,13 +72,3 @@ class Cart {
     }
 
 }
-
-
-$cart = new Cart;
-$cart->setTaxContext(new StateTaxContext('MN'));
-$cart->setDiscount(new Discount(5.00));
-$p1 = new ProductLineItem(9000, 44.99);
-$p2 = new ProductLineItem(5050, 19.99);
-$cart->addLineItem($p1->setQuantity(3));
-$cart->addLineItem($p2);
-//echo "Cart Count: {$cart->getLineItemCount()} Total: {$cart->getTotal()}\n";

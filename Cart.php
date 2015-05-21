@@ -36,4 +36,4 @@ $cart->tax = 0.07;
 $cart->discount = 5.00;
 $cart->addItem(9000, 44.99, 3);
 $cart->addItem(5050, 19.99, 1);
-echo "Cart Count: " . count($cart->lineItems).  " Total: {$cart->getTotal()}\n";
+echo "Cart has (" . count($cart->lineItems).  ") line items. Total: {$cart->getTotal()}\n";

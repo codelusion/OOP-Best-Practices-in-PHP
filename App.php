@@ -12,7 +12,7 @@ class App {
         $p2 = new ProductLineItem(5050, 19.99);
         $cart->addLineItem($p1->setQuantity(3));
         $cart->addLineItem($p2);
-        echo "Cart Count: {$cart->getLineItemCount()} Total: {$cart->getTotal()}\n";
+        echo "Cart has ({$cart->getLineItemCount()}) line items. Total: {$cart->getTotal()}\n";
     }
 
 }

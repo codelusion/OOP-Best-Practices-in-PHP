@@ -1,6 +1,7 @@
 <?php
 
 include_once('Discount.php');
+include_once('WholesaleDiscount.php');
 include_once('StateTaxContext.php');
 include_once('ProductLineItem.php');
 

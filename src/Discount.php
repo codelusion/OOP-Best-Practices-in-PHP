@@ -14,7 +14,8 @@ class Discount {
         if (is_array($items) && !empty($items)) {
             return $this->amount;
         } else {
-            return 0;
+            throw new RuntimeException("Discount cannot be added to empty Cart", 1);
+
         }
     }
 

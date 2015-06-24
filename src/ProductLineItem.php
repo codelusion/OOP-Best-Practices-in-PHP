@@ -13,7 +13,7 @@ class ProductLineItem implements ISaleable {
             $this->price = $price;
             $this->quantity = 1;
         } else {
-            throw new RuntimeException('Invalid Product');
+            throw new RuntimeException('Invalid Product ID or price');
         }
 
         return $this;

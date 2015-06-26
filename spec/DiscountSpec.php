@@ -19,8 +19,8 @@ class DiscountSpec extends ObjectBehavior
     }
 
     function it_should_fail_when_no_items_provided() {
-        $this->beConstructedWith(-8.00);
-        $this->getAmount(array())->shouldReturn(0);
+        $this->beConstructedWith(8.00);
+        $this->shouldThrow('RuntimeException')->during('getAmount', array(''));
     }
 
 }

@@ -33,26 +33,6 @@ class Cart {
         return number_format($this->total, 2);
     }
 
-    protected function calculateItemTotal() {
-        foreach ($this->lineItems as $item) {
-            $this->total += ($item['price'] * $item['quantity']);
-        }
-
-    }
-
-    protected function applyDiscounts() {
-        if (!empty($this->discount)) {
-            $this->total -= $this->discount;
-        }
-    }
-
-    protected function applyTax() {
-        if (!empty($this->tax)) {
-            $this->total += ($this->total * $this->tax);
-        }
-    }
-
-
     public function setTaxContext(ITaxContext $taxContext) {
         $this->hasTaxContext = true;
         $this->tax = $taxContext->getTax($this->total);
@@ -70,6 +50,25 @@ class Cart {
 
     public function getLineItemCount() {
         return count($this->lineItems);
+    }
+
+    protected function calculateItemTotal() {
+        foreach ($this->lineItems as $item) {
+            $this->total += ($item['price'] * $item['quantity']);
+        }
+
+    }
+
+    protected function applyDiscounts() {
+        if (!empty($this->discount)) {
+            $this->total -= $this->discount;
+        }
+    }
+
+    protected function applyTax() {
+        if (!empty($this->tax)) {
+            $this->total += ($this->total * $this->tax);
+        }
     }
 
 }

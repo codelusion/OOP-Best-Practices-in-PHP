@@ -13,7 +13,7 @@ Sample PHP Cart application using BDD/OOP
   
   ### Install & Run
   
-  ```
+  ```bash
   git clone https://github.com/codelusion/PHP-BDD-OOP-Sample
   composer update
   php Cart.php //old ways of doing things

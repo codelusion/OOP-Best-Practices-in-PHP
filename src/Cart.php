@@ -7,10 +7,13 @@ include_once('ProductLineItem.php');
 
 class Cart {
     protected $lineItems = array();
-    protected $tax = 0;
     protected $discount = 0;
     protected $total = 0.0;
-    protected $hasTaxContext = false;
+    protected $taxContext;
+
+    public function __construct(ITaxContext $taxContext) {
+        $this->taxContext = $taxContext;
+    }
 
     public function addLineItem(ISaleable $item) {
         $this->lineItems[] = array(
@@ -22,20 +25,15 @@ class Cart {
 
     public function getTotal() {
         $this->total = 0;
-        if ($this->hasTaxContext) {
-            $this->calculateItemTotal();
-            $this->applyDiscounts();
-            $this->applyTax();
-        } else {
-            throw new RuntimeException('Tax context not set');
-        }
+        $this->calculateItemTotal();
+        $this->applyDiscounts();
+        $this->applyTax();
 
         return number_format($this->total, 2);
     }
 
     public function setTaxContext(ITaxContext $taxContext) {
-        $this->hasTaxContext = true;
-        $this->tax = $taxContext->getTax($this->total);
+        $this->taxContext = $taxContext;
         return $this;
     }
 
@@ -60,15 +58,11 @@ class Cart {
     }
 
     protected function applyDiscounts() {
-        if (!empty($this->discount)) {
-            $this->total -= $this->discount;
-        }
+        $this->total -= $this->discount;
     }
 
     protected function applyTax() {
-        if (!empty($this->tax)) {
-            $this->total += ($this->total * $this->tax);
-        }
+        $this->total += $this->taxContext->getTax($this->total);
     }
 
 }

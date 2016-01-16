@@ -21,6 +21,6 @@ class StateTaxContext implements  ITaxContext {
 
 
     public function getTax($amount) {
-        return 0.07;
+        return 0.07 * $amount;
     }
 }

@@ -8,7 +8,7 @@ Sample PHP Cart application using BDD/OOP
   - Writing classes with extension in mind
   
   
-  ### Installation & Run
+  ### Install & Run
   
   ```
   git clone https://github.com/codelusion/PHP-BDD-OOP-Sample

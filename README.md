@@ -6,3 +6,17 @@ Sample PHP Cart application using BDD/OOP
   - Self-validating Object instances, rather than validations sprinkled throughout code
   - Interfaces and type-hinting to reduce runtime exceptions
   - Writing classes with extension in mind
+  
+  
+  ### Installation
+  
+  ```
+  git clone https://github.com/codelusion/PHP-BDD-OOP-Sample
+  composer update
+  php Cart.php //bad practices
+  php App.php //good practices
+  chmod +x ./runSpec.sh
+  ./runSpec.sh //PHPSpec tests
+  ```
+  
+  

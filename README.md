@@ -4,10 +4,11 @@ Sample PHP Cart application using BDD/OOP
   
   
   Illustrates:
-  - Encapsulation with Setters and Getters vs exposing Class internals
-  - Self-validating Object instances, rather than validations sprinkled throughout code
-  - Interfaces and type-hinting to reduce runtime exceptions
-  - Writing classes with extension in mind
+  
+  * Encapsulation with Setters and Getters vs exposing Class internals
+  * Self-validating Object instances, rather than validations sprinkled throughout code
+  * Interfaces and type-hinting to reduce runtime exceptions
+  * Writing classes with extension in mind
  
   Also used the PHPSpec Behavior Driven Development tool vs. the more traditional PHPUnit testing framework.
   

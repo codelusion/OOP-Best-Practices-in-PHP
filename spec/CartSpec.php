@@ -4,8 +4,14 @@ namespace spec;
 
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
+use StateTaxContext;
 
 class CartSpec extends ObjectBehavior {
+
+    function let(){
+        $this->beConstructedWith(new \StateTaxContext('MN'));
+    }
+
     function it_is_initializable() {
         $this->shouldHaveType('Cart');
     }

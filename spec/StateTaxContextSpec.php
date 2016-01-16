@@ -21,6 +21,7 @@ class StateTaxContextSpec extends ObjectBehavior
     function it_should_provide_positive_tax_amount()
     {
         $this->beConstructedWith('MN');
-        $this->getTax(0)->shouldReturn(.07);
+        $this->getTax(0)->shouldReturn(0.00);
+        $this->getTax(1)->shouldReturn(0.07);
     }
 }

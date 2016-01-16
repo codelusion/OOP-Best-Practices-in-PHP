@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Class WholesaleDiscount
+ * classes written with extension in mind
+ * allow for adding/modifying functionality
+ * without modifying existing code & tests
+ */
 class WholesaleDiscount extends Discount {
     protected $minQuantity;
 

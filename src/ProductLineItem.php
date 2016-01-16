@@ -22,11 +22,14 @@ class ProductLineItem implements ISaleable {
     public function getPrice() {
         return $this->price;
     }
-
+    //use setters and getters rather than expose class internals
     public function getQuantity() {
         return $this->quantity;
     }
 
+    //checks and validations are enforced
+    //so that instantiated classes are always
+    //in a usable state or throw errors
     public function setQuantity($quantity) {
         if (is_numeric($quantity) && $quantity > 0) {
             $this->quantity = $quantity;

@@ -1,6 +1,7 @@
 <?php
 
 class Discount {
+    //protected allows extension of class to Wholesale Discount
     protected $amount;
 
     public function __construct($amount) {

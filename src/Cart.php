@@ -11,6 +11,11 @@ class Cart {
     protected $total = 0.0;
     protected $taxContext;
 
+    /**
+     * Cart constructor.
+     * with explicit dependencies
+     * @param ITaxContext $taxContext
+     */
     public function __construct(ITaxContext $taxContext) {
         $this->taxContext = $taxContext;
     }
@@ -32,6 +37,8 @@ class Cart {
         return number_format($this->total, 2);
     }
 
+    //Type hinting using interfaces prevents
+    //unexpected runtime behavior
     public function setTaxContext(ITaxContext $taxContext) {
         $this->taxContext = $taxContext;
         return $this;

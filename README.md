@@ -13,7 +13,7 @@ Sample PHP Cart application using BDD/OOP
   ```
   git clone https://github.com/codelusion/PHP-BDD-OOP-Sample
   composer update
-  php Cart.php //bad practices
+  php Cart.php //old ways of doing things
   php App.php //good practices
   chmod +x ./runSpec.sh
   ./runSpec.sh //PHPSpec tests

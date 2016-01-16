@@ -1,8 +1,7 @@
 ## Presentation: "Doing OOP/BDD in PHP"
 Sample PHP Cart application using BDD/OOP
 
-### This is the code I used to illustrate the basics of OOP principles and best practices.
-  
+######This code was used to illustrate the basics of OOP principles and best practices.
   
   Illustrates:
   
